@@ -3,7 +3,21 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    [Header("References")]
     [SerializeField] private Transform _orientationTransform;
+
+    [Header("Player Movement Settings")]
+    [SerializeField] private float _movementSpeed;
+
+    [Header("Player Jump Settings")]
+    [SerializeField] private KeyCode _jumpKey;
+    [SerializeField] private float _jumpForce;
+    [SerializeField] private float _jumpCooldown;
+    [SerializeField] private bool _canJump;
+
+    [Header("Ground Check Settings")]
+    [SerializeField] private float _playerHeight;
+    [SerializeField] private LayerMask _groundLayer;
 
     private Rigidbody _playerRigidbody;
 
@@ -14,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _playerRigidbody = GetComponent<Rigidbody>();
+        _playerRigidbody.freezeRotation = true;
     }
 
     private void Update()
@@ -30,6 +45,13 @@ public class PlayerController : MonoBehaviour
     {
         _horizontalInput = Input.GetAxisRaw("Horizontal");
         _verticalInput = Input.GetAxisRaw("Vertical");
+        
+        if (Input.GetKey(_jumpKey) && _canJump && IsGrounded())
+        {
+            _canJump = false;
+            SetPlayerJumping();
+            Invoke(nameof(ResetJumping), _jumpCooldown);
+        }
     }
 
     private void SetPlayerMovement()
@@ -37,6 +59,22 @@ public class PlayerController : MonoBehaviour
         _movementDirection = _orientationTransform.forward * _verticalInput 
             + _orientationTransform.right * _horizontalInput;
 
-        _playerRigidbody.AddForce(_movementDirection * 10f, ForceMode.Force);
+        _playerRigidbody.AddForce(_movementDirection.normalized * _movementSpeed, ForceMode.Force);
+    }
+
+    private void SetPlayerJumping()
+    {
+        _playerRigidbody.linearVelocity = new Vector3(_playerRigidbody.linearVelocity.x, 0f, _playerRigidbody.linearVelocity.z);
+        _playerRigidbody.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
+    }
+
+    private void ResetJumping()
+    {   
+        _canJump = true;
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, _playerHeight * 0.5f + 0.2f, _groundLayer);
     }
 }

@@ -1044,9 +1044,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &1201192252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,6 +1060,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   _orientationTransform: {fileID: 1910614280}
+  _movementSpeed: 30
+  _jumpKey: 32
+  _jumpForce: 8
+  _jumpCooldown: 0.5
+  _canJump: 1
+  _playerHeight: 1
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1462459833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,8 +1320,8 @@ GameObject:
   - component: {fileID: 1641591321}
   - component: {fileID: 1641591320}
   - component: {fileID: 1641591319}
-  m_Layer: 0
-  m_Name: Floor
+  m_Layer: 6
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
