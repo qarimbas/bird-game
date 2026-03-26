@@ -20,8 +20,6 @@ public class PlayerAnimationController : MonoBehaviour
         _playerController.OnPlayerJumped += PlayerController_OnPlayerJumped;
     }
 
-    
-
     private void Update()
     {
         SetPlayerAnimations(); 
@@ -30,12 +28,12 @@ public class PlayerAnimationController : MonoBehaviour
     private void PlayerController_OnPlayerJumped()
     {
         _playerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING, true);
+        Invoke(nameof(ResetJumping), 0.5f);
     }
 
     private void ResetJumping()
     {
-        _playerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING, true);
-        Invoke(nameof(ResetJumping), 0.5f);
+        _playerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING, false);
     }
 
     private void SetPlayerAnimations()
