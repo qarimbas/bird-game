@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
             _stateController.ChangeState(newState);
         }
 
-        Debug.Log($"Current Player State: {newState}");
+        //Debug.Log($"Current Player State: {newState}");
     }
 
     private void SetPlayerMovement()
