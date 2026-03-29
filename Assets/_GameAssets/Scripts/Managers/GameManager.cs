@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
+    public event Action<GameState> OnGameStateChanged;
 
     [Header("References")]
 
@@ -13,11 +16,25 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int _maxEggCount = 5;
 
+    private GameState _currentGameState;
+
     private int _currentEggCount;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void OnEnable()
+    {
+        ChangeGameState(GameState.Play);
+    }
+
+    public void ChangeGameState(GameState gameState)
+    {
+        OnGameStateChanged?.Invoke(gameState);
+        _currentGameState = gameState;
+        Debug.Log($"Game state changed to: {_currentGameState}");
     }
 
     public void OnEggCollected()
@@ -30,7 +47,13 @@ public class GameManager : MonoBehaviour
             // Implement win 
             Debug.Log("All eggs collected! You win!");
             _eggCounterUI.SetEggCompleted();
+            ChangeGameState(GameState.GameOver);
         }
         Debug.Log($"Egg collected! Current count: {_currentEggCount}/{_maxEggCount}");
+    }
+
+    public GameState GetCurrentGameState()
+    {
+        return _currentGameState;
     }
 }
