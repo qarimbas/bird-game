@@ -2744,7 +2744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed10cce5dd0637b478729371d9f60b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsUI
-  _gameManager: {fileID: 1676923417}
   _settingsPopupObject: {fileID: 657202703}
   _blackBackgroundObject: {fileID: 1862125367}
   _settingsButton: {fileID: 1836313190}
