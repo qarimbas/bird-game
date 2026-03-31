@@ -45,12 +45,10 @@ public class GameManager : MonoBehaviour
 
         if (_currentEggCount == _maxEggCount)
         {
-            //Debug.Log("All eggs collected! You win!");
-            _eggCounterUI.SetEggCompleted();
             ChangeGameState(GameState.GameOver);
+            _eggCounterUI.SetEggCompleted();
             _winLoseUI.OnGameWin();
         }
-        //Debug.Log($"Egg collected! Current count: {_currentEggCount}/{_maxEggCount}");
     }
 
     public GameState GetCurrentGameState()
