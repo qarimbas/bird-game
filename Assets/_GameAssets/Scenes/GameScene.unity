@@ -4023,7 +4023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &674742540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7812,6 +7812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1379565708}
   - component: {fileID: 1379565711}
+  - component: {fileID: 1379565712}
   - component: {fileID: 1379565710}
   - component: {fileID: 1379565707}
   - component: {fileID: 1379565706}
@@ -7865,7 +7866,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -7941,8 +7942,21 @@ MonoBehaviour:
   _patrolRadius: 28
   _waitTime: 6.75
   _maxDestinationAttempts: 50
-  _chaseDistanceThreshold: 2.25
-  _chaseDistance: 2.75
+  _chaseDistanceThreshold: 1.5
+  _chaseDistance: 2
+--- !u!114 &1379565712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379565705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9594fa8e344a047b3c2b0c4a30280f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CatAnimationController
+  _catAnimator: {fileID: 6835629627394437776}
 --- !u!1 &1385692184
 GameObject:
   m_ObjectHideFlags: 0
@@ -9644,8 +9658,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255709793015e414aa0ae41dd7f0190f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  _catController: {fileID: 1379565711}
   _eggCounterUI: {fileID: 1123328014}
   _winLoseUI: {fileID: 1994351193}
+  _playerHealthUI: {fileID: 985544065}
   _maxEggCount: 5
   _delay: 0.5
 --- !u!1 &1689608189
@@ -10888,9 +10904,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'OOPS..
+  m_text: 'mission failed!
 
-    YOU LOST!'
+    wasted'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b3c49772674db94993c9d3067c8b6d2, type: 2}
   m_sharedMaterial: {fileID: -7256511997420077062, guid: 1b3c49772674db94993c9d3067c8b6d2, type: 2}
@@ -10899,8 +10915,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4291270376
+  m_fontColor: {r: 0.909804, g: 0.5882353, b: 0.7803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12334,7 +12350,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278426353
   m_fontColor: {r: 0.9450981, g: 0.6039216, b: 0.011764707, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -14681,7 +14697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6835629627394437775}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14689,7 +14705,7 @@ Transform:
   - {fileID: 4269611116863716504}
   - {fileID: 5158158075788332382}
   m_Father: {fileID: 1379565708}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &6186096380885172977
 Transform:
   m_ObjectHideFlags: 0
@@ -14931,6 +14947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6167354515399600181}
+  - component: {fileID: 6835629627394437776}
   m_Layer: 0
   m_Name: CatVisual
   m_TagString: Untagged
@@ -14938,6 +14955,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &6835629627394437776
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835629627394437775}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c23472b818daf31409ebbd817a09e04e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7009720416854693592
 Transform:
   m_ObjectHideFlags: 0
