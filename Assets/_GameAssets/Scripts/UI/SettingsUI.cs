@@ -35,6 +35,8 @@ public class SettingsUI : MonoBehaviour
     {
         GameManager.Instance.ChangeGameState(GameState.Pause);
 
+        Debug.Log("Settings button clicked. Game paused.");
+
         _blackBackgroundObject.SetActive(true);
         _settingsPopupObject.SetActive(true);
 
