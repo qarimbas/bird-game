@@ -1,5 +1,7 @@
 public enum GameState
 {
+    CutScene,
+    
     Play,
 
     Pause,
