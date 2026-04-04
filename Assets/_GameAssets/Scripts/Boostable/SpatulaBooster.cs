@@ -23,6 +23,7 @@ public class SpatulaBooster : MonoBehaviour, IBoostable
 
         _isactivated = true;
         Invoke(nameof(ResetActivation), 0.2f);
+        AudioManager.Instance.Play(SoundType.SpatulaSound);
     }
 
     private void PlayBoostAnimation()

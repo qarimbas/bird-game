@@ -734,6 +734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 108090647}
+  - component: {fileID: 108090652}
   - component: {fileID: 108090650}
   - component: {fileID: 108090649}
   - component: {fileID: 108090648}
@@ -869,6 +870,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &108090652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108090646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &115680937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,6 +1960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 298972441}
+  - component: {fileID: 298972446}
   - component: {fileID: 298972444}
   - component: {fileID: 298972443}
   - component: {fileID: 298972442}
@@ -2082,6 +2096,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &298972446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298972440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!4 &301053767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6045183435631843388, guid: 0a5310676c44b2548b7b99d445ff3528, type: 3}
@@ -3500,6 +3526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 608739562}
+  - component: {fileID: 608739567}
   - component: {fileID: 608739565}
   - component: {fileID: 608739564}
   - component: {fileID: 608739563}
@@ -3635,6 +3662,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &608739567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608739561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &610624566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,6 +4346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 761463635}
+  - component: {fileID: 761463640}
   - component: {fileID: 761463638}
   - component: {fileID: 761463637}
   - component: {fileID: 761463636}
@@ -4442,6 +4482,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &761463640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761463634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1001 &782186359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5535,6 +5587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926349033}
+  - component: {fileID: 926349038}
   - component: {fileID: 926349036}
   - component: {fileID: 926349035}
   - component: {fileID: 926349034}
@@ -5669,6 +5722,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &926349038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926349032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &952332830
 GameObject:
   m_ObjectHideFlags: 0
@@ -7387,6 +7452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1281434609}
+  - component: {fileID: 1281434614}
   - component: {fileID: 1281434612}
   - component: {fileID: 1281434611}
   - component: {fileID: 1281434610}
@@ -7522,6 +7588,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1281434614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281434608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &1286371622
 GameObject:
   m_ObjectHideFlags: 0
@@ -7531,6 +7609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286371623}
+  - component: {fileID: 1286371628}
   - component: {fileID: 1286371626}
   - component: {fileID: 1286371625}
   - component: {fileID: 1286371624}
@@ -7665,6 +7744,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1286371628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286371622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1 &1319220381
 GameObject:
   m_ObjectHideFlags: 0
@@ -7965,6 +8056,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1340714482911659934, guid: d5e606eaa576966479439f9362d20f04, type: 3}
   m_PrefabInstance: {fileID: 1340872400}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1343312750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.95447
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.46065
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32.48591
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451116287091009963, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175138653785996854, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: Sounds.Array.data[6].SoundType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175138653785996854, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: Sounds.Array.data[7].SoundType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175138653785996854, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: Sounds.Array.data[8].SoundType
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175138653785996854, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: Sounds.Array.data[9].SoundType
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175138653785996854, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: Sounds.Array.data[10].SoundType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175138653785996854, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: Sounds.Array.data[11].SoundType
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186866505964250575, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c6c36ae10ba12b4db78dd68cfb07b81, type: 3}
 --- !u!1 &1379565705
 GameObject:
   m_ObjectHideFlags: 0
@@ -10290,6 +10462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1739182328}
+  - component: {fileID: 1739182333}
   - component: {fileID: 1739182331}
   - component: {fileID: 1739182330}
   - component: {fileID: 1739182329}
@@ -10425,6 +10598,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1739182333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739182327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!1001 &1788694267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10880,6 +11065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1836313189}
+  - component: {fileID: 1836313194}
   - component: {fileID: 1836313192}
   - component: {fileID: 1836313191}
   - component: {fileID: 1836313190}
@@ -11014,6 +11200,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1836313194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836313188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb59640f1226554b8ac785b1015f4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverController
 --- !u!4 &1838000936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2835965265564938356, guid: 1d7076774c172bf4baabce47dd185165, type: 3}
@@ -16021,10 +16219,11 @@ SceneRoots:
   - {fileID: 922524715}
   - {fileID: 417155143}
   - {fileID: 1664437091}
-  - {fileID: 759238295}
+  - {fileID: 1343312750}
   - {fileID: 2053124562}
   - {fileID: 344319959}
   - {fileID: 1676923416}
+  - {fileID: 759238295}
   - {fileID: 1462459834}
   - {fileID: 1201192249}
   - {fileID: 1396028178}
