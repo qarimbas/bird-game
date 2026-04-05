@@ -5310,6 +5310,8 @@ MonoBehaviour:
   _musicPassiveSprite: {fileID: 21300000, guid: 5f1b2ea972b168448b4c057a28eb7f2a, type: 3}
   _soundActiveSprite: {fileID: 21300000, guid: b70c31f4b7494cf40ad2dfcb839120cf, type: 3}
   _soundPassiveSprite: {fileID: 21300000, guid: 11231ee54f9eb5948b175a2a69b0d050, type: 3}
+  _isMusicActive: 1
+  _isSoundActive: 1
 --- !u!1 &865848674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f960c053b319f6c4381f2b67bfea54bf, type: 3}

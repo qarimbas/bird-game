@@ -1,6 +1,7 @@
 using DG.Tweening;
 using MaskTransitions;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,8 +31,8 @@ public class SettingsUI : MonoBehaviour
 
     private Image _blackBackgroundImage;
 
-    private bool _isMusicActive;
-    private bool _isSoundActive;
+    [SerializeField] private bool _isMusicActive;
+    [SerializeField] private bool _isSoundActive;
 
     private void Awake()
     {
@@ -47,6 +48,18 @@ public class SettingsUI : MonoBehaviour
             TransitionManager.Instance.LoadLevel(Consts.SceneNames.MENU_SCENE);
         });
     }
+
+    /*
+     *     private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                OnSettingsButtonClicked();
+                Debug.Log("Escape key pressed. Settings menu opened.");
+            }
+        }
+     * 
+     */
 
     private void OnSettingsButtonClicked()
     {
