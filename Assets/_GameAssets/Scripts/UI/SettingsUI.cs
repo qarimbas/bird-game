@@ -1,5 +1,6 @@
 using DG.Tweening;
 using MaskTransitions;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,8 +21,17 @@ public class SettingsUI : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float _animationDuration;
 
+    [Header("Sprites")]
+    [SerializeField] private Sprite _musicActiveSprite;
+    [SerializeField] private Sprite _musicPassiveSprite;
+    [SerializeField] private Sprite _soundActiveSprite;
+    [SerializeField] private Sprite _soundPassiveSprite;
+
 
     private Image _blackBackgroundImage;
+
+    private bool _isMusicActive;
+    private bool _isSoundActive;
 
     private void Awake()
     {
@@ -50,6 +60,25 @@ public class SettingsUI : MonoBehaviour
 
         _blackBackgroundImage.DOFade(0.8f, _animationDuration).SetEase(Ease.Linear);
         _settingsPopupObject.transform.DOScale(1.5f, _animationDuration).SetEase(Ease.OutBack);
+
+        _musicButton.onClick.AddListener(OnMusicButtonClicked);
+        _soundButton.onClick.AddListener(OnSoundButtonClicked);
+    }
+
+    private void OnSoundButtonClicked()
+    {
+        AudioManager.Instance.Play(SoundType.ButtonClickSound);
+        _isSoundActive = !_isSoundActive;
+        _soundButton.image.sprite = _isSoundActive ? _soundActiveSprite : _soundPassiveSprite;
+        AudioManager.Instance.SetSoundEffectsMute(!_isSoundActive);
+    }
+
+    private void OnMusicButtonClicked()
+    {
+        AudioManager.Instance.Play(SoundType.ButtonClickSound);
+        _isMusicActive = !_isMusicActive;
+        _musicButton.image.sprite = _isMusicActive ? _musicActiveSprite : _musicPassiveSprite;
+        BackgroundMusic.Instance.SetMusicMute(!_isMusicActive);
     }
 
     private void OnResumeButtonClicked()
